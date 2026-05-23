@@ -1,6 +1,6 @@
 {
   "name": "@spbeck/lit-components",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Reusable Lit web components for any frontend framework.",
   "type": "module",
   "license": "MIT",
