@@ -6,11 +6,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/lit-components.git"
+    "url": "git+https://github.com/spcbeck/lit-components.git"
   },
-  "homepage": "https://github.com/your-org/lit-components#readme",
+  "homepage": "https://github.com/spcbeck/lit-components#readme",
   "bugs": {
-    "url": "https://github.com/your-org/lit-components/issues"
+    "url": "https://github.com/spcbeck/lit-components/issues"
   },
   "keywords": [
     "lit",
