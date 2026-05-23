@@ -1,5 +1,9 @@
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import {
+  createComponentEventDetail,
+  emitComponentEvent
+} from "../utils/events.js";
 
 @customElement("lc-button")
 export class LcButton extends LitElement {
@@ -50,16 +54,17 @@ export class LcButton extends LitElement {
   @property({ type: Boolean, reflect: true })
   disabled = false;
 
-  private onClick(): void {
+  private onClick(nativeEvent: MouseEvent): void {
     if (this.disabled) {
       return;
     }
 
-    this.dispatchEvent(
-      new CustomEvent("lc-click", {
-        detail: { label: this.label },
-        bubbles: true,
-        composed: true
+    emitComponentEvent(
+      this,
+      "lc-click",
+      createComponentEventDetail("lc-button", {
+        value: { label: this.label },
+        nativeEvent
       })
     );
   }
