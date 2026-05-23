@@ -1,0 +1,69 @@
+{
+  "name": "lit-components",
+  "version": "0.1.0",
+  "description": "Reusable Lit web components for any frontend framework.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/lit-components.git"
+  },
+  "homepage": "https://github.com/your-org/lit-components#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/lit-components/issues"
+  },
+  "keywords": [
+    "lit",
+    "web-components",
+    "custom-elements",
+    "design-system",
+    "frontend"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./badge": {
+      "types": "./dist/components/lc-badge.d.ts",
+      "import": "./dist/components/lc-badge.js"
+    },
+    "./button": {
+      "types": "./dist/components/lc-button.d.ts",
+      "import": "./dist/components/lc-button.js"
+    },
+    "./card": {
+      "types": "./dist/components/lc-card.d.ts",
+      "import": "./dist/components/lc-card.js"
+    },
+    "./define": {
+      "types": "./dist/define.d.ts",
+      "import": "./dist/define.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "publish:check": "npm pack --dry-run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
