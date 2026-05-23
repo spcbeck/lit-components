@@ -1,6 +1,6 @@
 {
   "name": "lit-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable Lit web components for any frontend framework.",
   "type": "module",
   "license": "MIT",
